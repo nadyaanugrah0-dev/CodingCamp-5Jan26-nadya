@@ -3,21 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo List - Nadya</title>
+    <title>Todo List - Acim</title>
 
     <!-- CSS External -->
     <link rel="stylesheet" href="css\styles.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
+
 <body>
     <!-- Header Content -->
-    <header></header>
-
+    <header>
+        <h1 class="text font-bold text-2xl"></h1>Todo List Website - Acim</h1>
+    </header>
+        
     <!-- Main Content -->
-    <main></main>
+    <main>
+        <!-- Form Section -->
+         <section>
+            <form>
+                <!-- Todo Input -->
+                 <input class="border rounded p-2" type="text" id="todo-input" placeholder="Enter a new todo item">
+
+                <!-- Date Input -->
+                 <input class="border rounded p-2" type="date" id="todo-date" placeholder="Enter due date">
+            </form>
+
+            <!-- Add Button -->
+             <button onclick="addTodo()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="button">Add Todo</button>
+         </section>
+
+         <!-- Action Section -->
+         <section class="flex pt-2 justify-between">
+            <!-- Clear All Button -->
+            <button onclick="removeAllTodo()" class="border rounded p-2 bg-red-500 text-white">Clear All Todos</button>
+
+            <!-- Filter Options -->
+            <button onclick="filterTodo()" class="border rounded p-2 bg-red-500 text-white">Filter Todos</button>
+        </section>
+
+        <!-- Todo List Section -->
+        <section class="pt-2">
+            <header>
+                <h1 class="text-2xl font-semibold">List of Todos</h1>
+            </header>
+
+            <ul class="pt-2" id="todo-list">
+                <!-- Todo items will be dynamically added here -->
+                <li>No todos available</li>
+            </ul>
+        </section>
+    </main>
     
     <!-- Footer Content -->
-    <footer></footer>
-
+    <footer>
+        <p class="text-center pt-4">2026 Acim's Todo List</p>
+    </footer>
 
 
     <!-- JS External -->
